@@ -1,0 +1,11 @@
+﻿@model AccountViewModel
+@{	
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="text-center mt-5">
+    <h1>&#128075; Welcome @Model.Forename @Model.Surname</h1>
+    <p>There isn't much to do here, but thanks for checking out this Proof of Concept!</p>
+
+    <a class="mt-5 btn btn-outline-primary" asp-area="" asp-controller="Home" asp-action="Index">Return to the Login page</a>
+</div>
