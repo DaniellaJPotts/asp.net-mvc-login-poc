@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginPOC - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LoginPOC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="mb-3">
+        <nav class="navbar navbar-light border-bottom box-shadow">
+            <div class="ps-5">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">LoginPOC</a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer row">
+        <div class="px-5 text-center col-sm-4 text-sm-start">    
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="text-decoration-none">2022 - LoginPOC</a>
+        </div>
+        <div class="px-5 text-center col-sm-4">
+            <div class="btn-group">
+                <a href="mailto:DaniellaJPotts@gmail.com" class="btn btn-outline-primary btn-lg" style="line-height: 0;">
+                    <span class="iconify" data-icon="line-md:email"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/daniellajpotts/" class="btn btn-outline-primary btn-lg" style="line-height: 0;">
+                    <span class="iconify" data-icon="line-md:linkedin"></span>
+                </a>
+                <a href="https://github.com/DaniellaJPotts" class="btn btn-outline-primary btn-lg" style="line-height: 0;">
+                    <span class="iconify" data-icon="line-md:github"></span>
+                </a>
+                <a href="https://twitter.com/DaniellaJPotts" class="btn btn-outline-primary btn-lg" style="line-height: 0;">
+                    <span class="iconify" data-icon="line-md:twitter"></span>
+                </a>
+            </div>
+        </div>
+        <div class="px-5 text-center col-sm-4 text-sm-end">            
+            <a href="https://github.com/DaniellaJPotts" class="text-decoration-none">DaniellaJPotts</a>
+        </div>
+    </footer>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--These icons are under MIT and designed by Vjacheslav Trushkin-->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
