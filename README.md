@@ -31,7 +31,7 @@
 		This project is a simple ASP.NET 6.0 MVC web application, demonstrating a login system Proof of Concept.
 		Here users can complete the login form, entering one of two account details.
 		Once logged in, the user will be taken to the Authentication page, where a mock text message will appear on the screen.
-		Uppon successfully completing the Authentication form using the 6 digit code provided,
+		Upon successfully completing the Authentication form using the 6-digit code provided,
 		users will be greeted with a Welcome page specific to the account entered.
 	</p>
 	<table>
@@ -64,7 +64,7 @@
 		<p>
 			Below is the Login (and index) page for this project.
 			This page features a simple navigation bar with a home button, login form, and contact links in the footer. 
-			When correctly completiting the form and clicking the "Login to LoginPOC" button,
+			When correctly completing the form and clicking the "Login to LoginPOC" button,
 			users will be taken to the Authentication page where they can complete logging in.
 		</p>
 		<div align="center"><img width=75% src="Images/LoginPOC - Login.png"></div>
@@ -83,7 +83,7 @@
 		<p>
 			Below is the Authentication page, seen after successfully logging in to an account.
 			The first thing users will see when entering the page is a mock text message displaying their authentication code.
-			When closing this message the authentication code can be entered into the form, and submitted using the "Continue" button
+			When closing this message, the authentication code can be entered into the form, and submitted using the "Continue" button
 			Upon successful completion, the user will be taken to the Welcome Page.
 			The mock text message can be seen again by clicking the "View Message" button in the bottom right corner of the page.
 		</p>
