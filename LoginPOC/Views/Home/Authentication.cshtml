@@ -1,0 +1,54 @@
+﻿@model AuthenticationViewModel
+@{
+    ViewData["Title"] = "Authentication";
+}
+
+<div class="text-center mt-5">
+    <h1>Two-Factor Authentication</h1>
+    <p>Hello @Model.Name, before you can login please enter the 6-digit code sent to ******@Model.PhoneEnding.</p>
+</div>
+
+<div class="mx-auto mt-4" style="max-width: 40rem;">
+    <form class="needs-validation" asp-controller="Home" asp-action="Welcome" method="post" novalidate>
+        <input asp-for="AccountHash" type="hidden" readonly required />
+        <div class="form-group mb-3">
+            <label for="inputCode" class="form-label">Authentication Code</label>
+            <input asp-for="AuthnCode" type="text" pattern="\d{6}" maxlength="6" class="form-control" id="inputCode" placeholder="6 Digit Code" required />
+            <div class="invalid-feedback">
+                Please enter your 6 digit code.
+            </div>
+            <a href="javascript:window.location.reload(true)" class="form-text link-secondary">
+                <span class="iconify" data-icon="line-md:rotate-270"></span>Resend Code
+            </a>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary col-12">Continue</button>
+    </form>
+</div>
+
+<!------- Message Modal ------->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><span class="iconify" data-icon="line-md:text-box"></span> New Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5><span class="iconify" data-icon="line-md:account"></span> LoginPOC 2FA</h5>
+                <p class="mb-0">Your LoginPOC authentication code is: @Model.AuthnCodePOC.</p>
+                <p class="mb-0">This code expires in 5 minutes. Please don't reply.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-absolute bottom-0 end-0 me-4 mb-4">
+    <button type="button" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#myModal">
+        View Message
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            1
+            <span class="visually-hidden">message</span>
+        </span>
+    </button>
+</div>

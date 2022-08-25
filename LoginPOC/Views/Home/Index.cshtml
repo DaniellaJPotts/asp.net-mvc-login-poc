@@ -1,5 +1,5 @@
 ﻿@model LoginViewModel
-@{	
+@{
     ViewData["Title"] = "Login";
 }
 
@@ -8,15 +8,28 @@
     <p>Please login below to access the rest of LoginPOC.</p>
 </div>
 
+@if (Model.ErrorMessage is not null)
+{
+    <div class="alert alert-danger mx-auto" style=" max-width: 35rem;">
+        <p class="mb-0">&bull; @Model.ErrorMessage</p>
+    </div>
+}
+
 <div class="mx-auto mt-4" style="max-width: 40rem;">
-    <form asp-controller="Home" asp-action="Welcome" method="post">  
+    <form class="needs-validation" asp-controller="Home" asp-action="Authentication" method="post" novalidate>
         <div class="form-group mb-3">
             <label for="inputEmail" class="form-label">Email Address</label>
-            <input asp-for="Email" type="email" class="form-control" id="inputEmail" placeholder="Enter email" /> 
+            <input asp-for="Email" type="email" class="form-control" id="inputEmail" placeholder="Enter email" required />
+            <div class="invalid-feedback">
+                Please enter a valid email.
+            </div>
         </div>
         <div class="form-group mb-3">
             <label for="inputPassword" class="form-label">Password:</label>
-            <input asp-for="Password" type="password" class="form-control" id="inputPassword" placeholder="Password">           
+            <input asp-for="Password" type="password" pattern=".{8,}" class="form-control" id="inputPassword" placeholder="Enter password" required />
+            <div class="invalid-feedback">
+                Passwords are atleast 8 characters long.
+            </div>
             <a href="#" class="form-text link-secondary">Forgot password?</a>
         </div>
 
