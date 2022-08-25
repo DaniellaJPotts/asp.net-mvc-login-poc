@@ -30,7 +30,9 @@
 	<p>
 		This project is a simple ASP.NET 6.0 MVC web application, demonstrating a login system Proof of Concept.
 		Here users can complete the login form, entering one of two account details.
-		Once logged in, the user will be greeted with a Welcome page specific to the account entered.
+		Once logged in, the user will be taken to the Authentication page, where a mock text message will appear on the screen.
+		Uppon successfully completing the Authentication form using the 6 digit code provided,
+		users will be greeted with a Welcome page specific to the account entered.
 	</p>
 	<table>
 		<caption>The account details in this application are as followed:</cation>
@@ -61,17 +63,38 @@
 		<summary>Login Page</summary>
 		<p>
 			Below is the Login (and index) page for this project.
-			This page features a simple navigation bar with home button, a login form, and contact links in the footer. 
-			When correctly completiting the form and clicking the "Login to LoginPOC" button, users will be taken to the Welcome page.
+			This page features a simple navigation bar with a home button, login form, and contact links in the footer. 
+			When correctly completiting the form and clicking the "Login to LoginPOC" button,
+			users will be taken to the Authentication page where they can complete logging in.
 		</p>
 		<div align="center"><img width=75% src="Images/LoginPOC - Login.png"></div>
 		<div align="center"><img width=75% src="Images/LoginPOC - Logging in.png"></div>
-	</details>		
+		<p>
+			When entering invalid data, users will be prompted to enter the correct pattern of data to the form.
+		</p>
+		<div align="center"><img width=75% src="Images/LoginPOC - Login Validation .png"></div>
+		<p>
+			If an error occurs, such as if the entered information doesnt match an account, users will be shown an appropriate error message.
+		</p>		
+		<div align="center"><img width=75% src="Images/LoginPOC - Login Error.png"></div>
+	</details>
+	<details>
+		<summary>Authentication Page</summary>
+		<p>
+			Below is the Authentication page, seen after successfully logging in to an account.
+			The first thing users will see when entering the page is a mock text message displaying their authentication code.
+			When closing this message the authentication code can be entered into the form, and submitted using the "Continue" button
+			Upon successful completion, the user will be taken to the Welcome Page.
+			The mock text message can be seen again by clicking the "View Message" button in the bottom right corner of the page.
+		</p>
+		<div align="center"><img width=75% src="Images/LoginPOC - Authentication Message.png "></div>
+		<div align="center"><img width=75% src="Images/LoginPOC - Authentication.png "></div>
+	</details>
 	<details>
 		<summary>Welcome Page</summary>
 		<p>
-			Below is the Welcome page, seen after successfully logging in.
-			This page features the same navigation bar and footer as the previous page, in addition to a welcoming message unique to the account.
+			Below is the Welcome page, seen after successfully logging in and completing the 2FA.
+			This page features the same navigation bar and footer as the previous pages, in addition to a welcoming message unique to the account.
 			From here the only other option is to return to the Login page.
 		</p>
 		<div align="center"><img width=75% src="Images/LoginPOC - Welcome.png"></div>
