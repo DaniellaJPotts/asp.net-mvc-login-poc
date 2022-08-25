@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LoginPOC.styles.css" asp-append-version="true" />
 </head>
-<body>
+
+<body class="d-flex flex-column vh-100">
     <header class="mb-3">
         <nav class="navbar navbar-light border-bottom box-shadow">
             <div class="ps-5">
@@ -17,11 +18,11 @@
         </nav>
     </header>
 
-    <main role="main">
+    <main class="position-relative flex-grow-1" role="main">
         @RenderBody()
     </main>
 
-    <footer class="border-top footer row">
+    <footer class="border-top footer position-static row">
         <div class="px-5 text-center col-sm-4 text-sm-start">    
             <a asp-area="" asp-controller="Home" asp-action="Index" class="text-decoration-none">2022 - LoginPOC</a>
         </div>
