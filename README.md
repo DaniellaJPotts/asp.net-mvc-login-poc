@@ -1,14 +1,8 @@
 <!-- --------------- Contact Buttons --------------- -->
 <div align="right">
-	<a href="mailto:DaniellaJPotts@gmail.com" alt="Gmail" title="Send me an Email!">
-		<img src="https://img.shields.io/badge/-Gmail-EA4335?logo=gmail&logoColor=white&style=for-the-badge">
-	</a>
-	<a href="https://www.linkedin.com/in/daniellajpotts/" alt="LinkedIn" title="Connect to me on LinkedIn!">
-		<img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge"
-	</a>
-	<a href="https://twitter.com/DaniellaJPotts" alt="Twitter" title="Follow me on Twitter!">
-		<img src="https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=white&style=for-the-badge">
-	</a>
+	<a href="mailto:DaniellaJPotts@gmail.com" alt="Gmail" title="Send me an Email!"><img src="https://img.shields.io/badge/-Gmail-EA4335?logo=gmail&logoColor=white&style=for-the-badge"></a>
+	<a href="https://www.linkedin.com/in/daniellajpotts/" alt="LinkedIn" title="Connect to me on LinkedIn!"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge"></a>
+	<a href="https://twitter.com/DaniellaJPotts" alt="Twitter" title="Follow me on Twitter!"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=white&style=for-the-badge"></a>
 </div>
 
 
